@@ -1,0 +1,570 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*For adding Background image*/
+.mainPage
+{
+    background-image: url(Logo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .3s ease;
+}
+/*For making the view better*/
+.mainPage.active{
+    filter: blur(50px);
+    pointer-events: none;
+}
+/*Giving styling to the nav bar*/
+.navbar
+{
+    display: flex;
+    background-color: rgb(22, 9, 48);
+    background: linear-gradient(50deg,transparent,rgb(43, 7, 109),transparent);
+    height: 10vh;
+    justify-content: space-between;
+}
+/*Adding logo to the left of the navbar*/
+.logo
+{
+    align-items: center;
+    width: 10%;
+}
+/*Adding logo to the right of the navbar*/
+.logo1
+{
+    width: 10%;
+}
+/*Adding the pages to the navbar*/
+.nav-links
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 10px rgba(144, 131, 131, 0.2);
+}
+
+.nav-links a
+{
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+}
+
+.nav-links a:hover
+{
+    color: aqua;
+}
+.foot
+{
+    background-color: rgb(30, 29, 29);
+    min-height: 50px;
+}
+.foot h3
+{
+    font-size: 40px;
+    color: white;
+    margin-left: 35%;
+}
+.foot p
+{
+    font-size:20px;
+    color: white;
+    margin-left: 45%;
+}
+/*Adding a div which contain nothing...*/
+.extra
+{
+    height: 100vh;
+    width: 100%;
+}
+
+/*Contains the parent, child, and quiqui(quizs)*/
+.container
+{
+    display: flex;
+    height: 100vh;
+    width: 200%;
+    overflow: hidden;
+}
+.container.active
+{
+    display: none;
+    pointer-events: none;
+}
+
+/*parent div in home page which contain Congractulation...*/
+.parent
+{
+    left: -50%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*class of the div that contain the child div int it*/
+.child
+{
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.child h3
+{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 78px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.child p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 600px;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+/*This class is for the button*/
+.btn
+{
+    width: 190px;
+    height: 50px;
+    background: rgb(46, 34, 122);
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover{
+    background-color: black;
+    box-shadow: none;
+}
+/*For making a pop website*/
+.pop
+{
+    top: 38%;
+    left: 33%;
+    position: absolute;
+    width: 500px;
+    border-radius: 6px;
+    padding: 10px 25px;
+    /*For not hiding the div*/
+    opacity: 0;
+    /*For removing the cursor property*/
+    pointer-events: none;
+    transition: .3s ease;
+    background-color: #19224e;
+}
+/*For removing the hiding property*/
+.pop.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Giving styling to h3 inside the pop class*/
+.pop h3
+{
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+}
+/*Giving styling to p inside the pop class*/
+.pop p
+{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+/*This is the grup of the buttons "Exit" and "Continue"*/
+.buttons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*For the buttons "Exit" and "Continue"*/
+.buttons .into
+{
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    background: rgb(46, 34, 122);
+    border: 2px solid rgb(46, 34, 122);
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2.5px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/*Giving styling to the Exit button*/
+.buttons .into:nth-child(1)
+{
+    background-color: transparent;
+    color: white;
+}
+
+.buttons .into:nth-child(1):hover
+{
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+/*Giving hover effect to the "Continue" button */
+.buttons .into:nth-child(2)
+{
+    background-color: rgb(46, 34, 122);
+    color: white;
+}
+
+.buttons .into:nth-child(2):hover
+{
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+/*For getting the quiz page*/
+.quiqui
+{
+    left: -50%;
+    position: relative;
+    width: 100%;
+    background-color: rgb(9, 2, 29);
+    transition: .7s ease-in-out;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiqui.active
+{
+    left: 0;
+}
+
+.qui_box
+{
+    display: flex;
+}
+
+/*For making a Quiz box*/
+.quizBox
+{
+    border: 2px solid #c40094;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+    width: 37.5%;
+    min-height: 500px;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+}
+.quizBox.active
+{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quizBox h2
+{
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    background: linear-gradient(50deg,transparent,#c40094,transparent);
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.quizBox .qsqs
+{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quibui
+{
+    width: auto;
+    border-radius: 6px;
+    background-color: rgb(5, 5, 5);
+    flex-direction: column;
+    display: none;
+}
+.quibui p
+{
+    background-image: url(colo1.jpg);
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-top: 2px;
+    font-size: 25px;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/*For options*/
+.optlist .opt
+{
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 17px;
+    margin: 15px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: .3s;
+}
+/* Add styles for correct and incorrect options */
+/* .opt.correct {
+    border-color: green;
+    background-color: rgba(0, 255, 0, 0.1);
+    color: green;
+}
+
+.opt.incorrect {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+} */
+
+/* .optlist .opt:hover
+{
+    box-shadow: 0 0 0 2.5px rgba(0, 0, 0, 1);
+    background-color: rgba(0,0,0,.9);
+    border: none;
+} */
+.opt span
+{
+    color: white;
+    font-size: 20px;
+}
+
+.opt.clicked {
+    background-color: #c40094;
+    color: white;
+    border-color: #c40094;
+    transition: none; /* Remove transition for clicked option */
+}
+
+.opt.selected {
+    background-color: #c40094;
+    color: white;
+    border-color: #c40094;
+}
+
+/*Footer of the quiz*/
+.newfoot
+{
+    border-top: 2px solid #c40094;
+    display: flex;
+    justify-content: space-between;
+}
+.newfoot .totu
+{
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+/*Shows the Next button*/
+.btbtn
+{
+    margin-top: 15px;
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    box-shadow: none;
+    border-radius: 6px;
+    font-size: 18px;
+    /* color: white; */
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+    background-color: #c40094;
+    background: #c40094;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.btbtn:hover
+{
+    background: transparent;
+}
+/*For index of question*/
+.quibuiFoot
+{
+    padding: 7px;
+    padding: 15px;
+    border-bottom: 2px solid #c40094;
+    display: flex;
+    justify-content: space-between;
+}
+.quibuiFoot1
+{
+    background: #c40094;
+    border-radius: 3px;
+    padding: 7px;
+    height: fit-content;
+}
+.quibuiFoot span
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+/*Giving styling to the countdown*/
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+/* Styleing the circular border */
+.countdown-circle {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #c40094;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Adjust the background color as needed */
+}
+
+/* Styleing the countdown numbers */
+.countdown {
+    font-size: 25px;
+    color: #c40094;
+}
+
+
+/*Showing result*/
+.result
+{
+    background-image: url(Logo.gif);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    font-size: 50px;
+}
+
+.container1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(Logo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+}
+.container1.active {
+    display: block;
+    pointer-events: auto;
+}
+.resultBox {
+    position: absolute;
+    top: 40%;
+    left: 31%;
+    width: 35.5%;
+    min-height: 200px;
+    /* border: 2px solid #c40094; */
+    background-color: #19224e;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    padding: 20px 30px;
+    transform: scale(.9);
+    transition: transform 1s ease, opacity 1s ease;
+    display: none;
+    pointer-events: none;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.resultBox.active {
+    display: block;
+    pointer-events: auto;
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Add transition for the zoom effect */
+}
+/*Giving styling to the score*/
+.countdown-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+
+/* Styleing the circular border */
+.countdown-circle1 {
+    margin-left: 40%;
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Adjust the background color as needed */
+}
+
+/* Styleing the score number */
+.countdown1 {
+    font-size: 25px;
+    text-shadow: 0 0 10px black;
+    color: white;
+}
+/*pass or not text color and shadow*/
+.hello
+{
+    color: white;
+    text-shadow: 0 0 10px black;
+}
