@@ -15,9 +15,9 @@ body
 {
     position: relative;
     border: solid 2px none;
-    background-color: #1c1c1c;
+    background-color: gray;
     width: 90%;
-    height: 90vh;
+    height: 95vh;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -91,24 +91,30 @@ body
 }
 @keyframes animate
 {
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
     100%{
         transform: rotate(360deg);
     }
 }
 .navbar {
-    margin-top: 20px;
-    height: 10vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 7vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
     font-size: 20px;
+    background-color: #1c1c1c;
+}
+.foot {
+    position: relative;
+    float: inline-end;
+    background-color: #1c1c1c;
+    /* background-color: gray; */
+    height: 7vh;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .navbar .nav2 {
@@ -136,4 +142,19 @@ body
 }
 .navbar .nav2 a:hover {
     color: #ff2770;
+}
+.p_child{
+    display: flex;
+    height: 76vh;
+    width: 100%;
+}
+.child1{
+    width: 50%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+.child2{
+    width: 50%;
+    background-color: beige;
 }
