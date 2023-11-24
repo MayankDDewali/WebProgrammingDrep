@@ -115,6 +115,9 @@ body
     width: 100%;
     margin-top: 5px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar .nav2 {
@@ -151,10 +154,55 @@ body
 .child1{
     width: 50%;
     background-color: white;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .child2{
     width: 50%;
     background-color: beige;
+}
+.child1 p:nth-child(1){
+    color: red;
+    margin-bottom: 5px;
+}
+.child1 h2{
+    line-height: 1;
+    color: purple;
+    font-size: 50px;
+}
+.child1 p{
+    font-size: larger;
+    color: darkblue;
+}
+.child1 button{
+    margin-top: 15px;
+    padding: 10px;
+}
+.child1 #but1{
+    margin-right: 15px;
+    background-color: #222;
+    color: white;
+    font-weight: 500;
+    transition-duration: .5s;
+}
+.child1 #but2{
+    color: black;
+    background-color: white;
+    font-weight: 500;
+    transition-duration: .5s;
+}
+.child1 #but1:hover{
+    background-color: white;
+    color: #222;
+}
+.child1 #but2:hover{
+    background-color: gray;
+    color: white;
+}
+.foot .foot1{
+    color: beige;
+    font-size: 25px;
+    letter-spacing: 1.5px;
 }
