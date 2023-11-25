@@ -206,3 +206,11 @@ body
     font-size: 25px;
     letter-spacing: 1.5px;
 }
+
+/* For About Us*/
+
+.p_child1{
+    display: flex;
+    height: 76vh;
+    width: 100%;
+}
