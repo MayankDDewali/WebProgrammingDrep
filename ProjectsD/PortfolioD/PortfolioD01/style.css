@@ -208,6 +208,7 @@ body {
     color: white;
     font-weight: 500;
     transition-duration: .5s;
+    border: none;
 }
 
 .child1 #but2 {
@@ -215,16 +216,19 @@ body {
     background-color: white;
     font-weight: 500;
     transition-duration: .5s;
+    border: none;
 }
 
 .child1 #but1:hover {
     background-color: white;
     color: #222;
+    border: none;
 }
 
 .child1 #but2:hover {
     background-color: gray;
     color: white;
+    border: none;
 }
 
 .foot .foot1 {
