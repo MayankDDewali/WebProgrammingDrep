@@ -179,6 +179,47 @@ body {
 .child2 {
     width: 50%;
     background-color: rgb(81, 81, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.child2 .x{
+    display: flex;
+    align-items: center;
+    float: left;
+    border: 2px solid black;
+    height: 125px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border-right: none;
+    margin-right: 100px;
+    padding: 20px;
+}
+.child2 .y{
+    display: flex;
+    float: right;
+    align-items: center;
+    border: 2px solid black;
+    height: 125px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    border-left: none;
+    margin-left: 100px;
+    text-align: right;
+    padding: 20px;
+}
+.child2 .z{
+    display: flex;
+    float: left;
+    align-items: center;
+    border: 2px solid black;
+    height: 125px;
+    margin-left: 20px;
+    border-right: none;
+    margin-right: 100px;
+    padding: 20px;
 }
 
 .child1 p:nth-child(1) {
@@ -212,11 +253,12 @@ body {
 }
 
 .child1 #but2 {
-    color: black;
-    background-color: white;
+    background-color: #222;
+    color: white;
     font-weight: 500;
     transition-duration: .5s;
     border: none;
+    float: right;
 }
 
 .child1 #but1:hover {
@@ -226,8 +268,8 @@ body {
 }
 
 .child1 #but2:hover {
-    background-color: gray;
-    color: white;
+    background-color: white;
+    color: #222;
     border: none;
 }
 
