@@ -226,7 +226,7 @@ body {
 }
 
 .about_child1 h3 {
-    color: white;
+    color: wheat;
     font-size: 30px;
     margin-top: 60px;
     margin-left: 20px;
@@ -238,7 +238,7 @@ body {
 }
 
 .about_child1 p {
-    color: beige;
+    color: white;
     font-size: 18px;
     margin-top: 20px;
     margin-left: 30px;
@@ -386,8 +386,69 @@ body {
 }
 .project_child1 h2{
     text-align: center;
-    color: white;
+    color: wheat;
+    font-size: 55px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.git{
-    
+.ab_project1{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    color: rgb(148, 148, 148);
+    font-size: 23px;
+}
+.ab_project2{
+    height: 30%;
+}
+.ab_project2 h3{
+    color: beige;
+    word-spacing: 10px;
+}
+.ab_project2 p{
+    color: white;
+    word-spacing: 5px;
+    line-height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.outro{
+    color: white;
+    height: 10%;
+    font-size: 20px;
+}
+.outro a{
+    text-decoration: none;
+    animation: animatess 10s linear infinite;
+    transition: 0.8s;
+}
+.outro a:hover{
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 25px lightblue, 0 0 50px blue;
+}
+
+@keyframes animatess {
+    0% {
+        color: blue;
+    }
+
+    20% {
+        color: darkblue;
+    }
+
+    40% {
+        color: blue;
+    }
+
+    60% {
+        color: darkblue;
+    }
+    80%{
+        color: blue;
+    }
+    100% {
+        color: darkblue;
+    }
 }
