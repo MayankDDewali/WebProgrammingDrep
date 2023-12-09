@@ -393,15 +393,18 @@ body {
     align-items: center;
     justify-content: center;
 }
-.ab_project1{
-    height: 10%;
+.pp_child{
     display: flex;
-    align-items: center;
-    color: rgb(148, 148, 148);
-    font-size: 23px;
+    flex-direction: row;
 }
 .ab_project2{
-    height: 30%;
+    height: 300px;
+    border: 5px groove beige;
+    margin: 50px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .ab_project2 h3{
     color: beige;
