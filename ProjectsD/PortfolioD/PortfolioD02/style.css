@@ -1,0 +1,130 @@
+/*                                                          Global Design                                                           */
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e0e11;
+}
+
+/* Making a parent div that will contain the style */
+.parent {
+    position: relative;
+    border: solid 2px none;
+    background-color: gray;
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: 10s ShadowAnimate infinite;
+}
+
+/* This div will contain the content */
+.child {
+    position: absolute;
+    background: #222;
+    inset: 5px;
+}
+/* Giving shadow animation */
+@keyframes ShadowAnimate {
+    0% {
+        box-shadow: 0 0 5px lightblue, 0 0 25px lightblue;
+    }
+
+    25% {
+        box-shadow: 0 0 5px blue, 0 0 25px blue;
+    }
+
+    50% {
+        box-shadow: 0 0 5px darkblue, 0 0 25px darkblue;
+    }
+    75%{
+        box-shadow: 0 0 5px blue, 0 0 25px blue;
+    }
+    100% {
+        box-shadow: 0 0 5px lightblue, 0 0 25px lightblue;
+    }
+}
+
+/* Navigation Border Lines */
+.borderline,
+.borderline1,
+.borderline2 {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.borderline::before,
+.borderline::after,
+.borderline1::before,
+.borderline1::after,
+.borderline2::before,
+.borderline2::after,
+.borderline3::before,
+.borderline3::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 90%;
+    height: 100vh;
+    transform-origin: bottom right;
+    animation: LineAnimate 10s linear infinite;
+}
+
+/* Different colors and animation delays for each line */
+.borderline::before {
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    animation-delay: -1s;
+}
+
+.borderline::after {
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    animation-delay: -6s;
+}
+
+.borderline1::before {
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    animation-delay: -2s;
+}
+
+.borderline1::after {
+    background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+    animation-delay: -7s;
+}
+
+.borderline2::before {
+    background: linear-gradient(0deg, transparent, transparent, rgb(254, 254, 138), rgb(254, 254, 138), rgb(254, 254, 138));
+    animation-delay: -3s;
+}
+
+.borderline2::after {
+    background: linear-gradient(0deg, transparent, transparent, rgb(254, 254, 138), rgb(254, 254, 138), rgb(254, 254, 138));
+    animation-delay: -8s;
+}
+
+.borderline3::before {
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    animation-delay: -3s;
+}
+
+.borderline3::after {
+    background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
+    animation-delay: -8s;
+}
+
+/* Keyframes animation */
+@keyframes LineAnimate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
