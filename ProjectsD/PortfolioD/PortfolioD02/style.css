@@ -325,6 +325,7 @@ body {
 .ProjectsParent{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
     margin: 10px;
     /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
@@ -332,28 +333,306 @@ body {
 }
 
 /* For making the box in the Project page */
-.ProjectsChild{
+.Project{
     height: 450px;
     width: 400px;
-    background-color: black;
+    position: relative;
+    overflow: hidden;
     border-radius: 35px;
+    /* background-color: black; */
+    border: none;
+    box-shadow: 0 0 5px black, 0 0 25px rgb(37, 35, 35), 0 0 50px darkslategray, 0 0 100px black;
+}
+.ProjectsChild{
+    height: 450px;
+    width: 200%;
+    border-radius: 35px;
+    transition: 2s;
+    display: flex;
+    left: -50%;
+    overflow: hidden;
 }
 
 /* For giving some spaces between the boxes */
-.ProjectsChild:nth-child(1),
-.ProjectsChild:nth-child(2){
+.Project:nth-child(1),
+.Project:nth-child(2){
     margin-right: 50px;
 }
 
 .ProMain{
-    width: 400px;
-    background-color: greenyellow;
+    width: 100%;
+    background-color: darkslategray;
+    /* text-align: center; */
+}
+
+/* For styling the heading */
+.ProMain h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+    /* margin-left: 65px; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: MilkMango;
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    word-spacing: 4px;
+}
+
+/* For styling the paragraph */
+.ProMain p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 5px gray, 0 0 25px darkslategray, 0 0 50px black;
+    font-size: 18px;
 }
 
 .ProIntro{
+    background-color: rgb(61, 60, 60);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    /* width: 400px; */
+    width: 100%;
+    position: relative;
+    left: -50%;
+    transition: .8s ease-in-out;
+    z-index: 100;
+    font-family: RhumaSinera;
+    font-size: 50px;
+    animation: IntroAni 10s linear infinite;
+}
+
+/* For animation */
+@keyframes IntroAni {
+    0% {
+        color: lightblue;
+        text-shadow: 0 0 5px black, 0 0 25px lightblue, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
+    }
+
+    20% {
+        color: wheat;
+        text-shadow: 0 0 5px black, 0 0 25px yellow, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
+    }
+
+    40% {
+        color: lightblue;
+        text-shadow: 0 0 5px black, 0 0 25px blue, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
+    }
+
+    60% {
+        color: beige;
+        text-shadow: 0 0 5px black, 0 0 25px wheat, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
+    }
+
+    80% {
+        color: lightblue;
+        text-shadow: 0 0 5px black, 0 0 25px blue, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
+    }
+
+    100% {
+        color: white;
+        text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
+    }
+}
+
+.ProIntro.active{
+    left: 0;
+}
+
+/* For Second Box */
+.ProjectsChild1{
+    height: 450px;
+    width: 200%;
+    border-radius: 35px;
+    transition: 2s;
+    display: flex;
+    left: -50%;
+    overflow: hidden;
+}
+
+.ProMain1{
+    width: 100%;
+    background-color: darkslategray;
+}
+
+/* For styling the heading */
+.ProMain1 h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+    /* margin-left: 65px; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: MilkMango;
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    word-spacing: 4px;
+}
+
+/* For styling the paragraph */
+.ProMain1 p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 5px gray, 0 0 25px darkslategray, 0 0 50px black;
+    font-size: 18px;
+}
+
+.ProIntro1{
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    left: -50%;
+    transition: .8s ease-in-out;
+    z-index: 100;
+    font-family: RhumaSinera;
+    font-size: 50px;
+    animation: IntroAni 10s linear infinite;
+}
+.ProIntro1.active{
+    left: 0;
+}
+
+/* For Third Box */
+.ProjectsChild2{
+    height: 450px;
+    width: 200%;
+    border-radius: 35px;
+    transition: 2s;
+    display: flex;
+    left: -50%;
+    overflow: hidden;
+}
+
+.ProMain2{
+    width: 100%;
+    background-color: darkslategray;
+}
+
+/* For styling the heading */
+.ProMain2 h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+    /* margin-left: 65px; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: MilkMango;
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    word-spacing: 4px;
+}
+
+/* For styling the paragraph */
+.ProMain2 p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    line-height: 20px;
+    /* font-weight: 700; */
+    text-shadow: 0 0 5px gray, 0 0 25px darkslategray, 0 0 50px black;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* For Anchor tag */
+.ProMain a{
+    text-decoration: none;
+    font-family: RhumaSinera;
+    font-size: 35px;
+}
+.ProMain1 a{
+    text-decoration: none;
+    font-family: RhumaSinera;
+    font-size: 35px;
+}
+.ProMain2 a{
+    text-decoration: none;
+    font-family: RhumaSinera;
+    font-size: 35px;
+}
+
+.ProIntro2{
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    left: -50%;
+    transition: .8s ease-in-out;
+    z-index: 100;
+    font-family: RhumaSinera;
+    font-size: 50px;
+    animation: IntroAni 10s linear infinite;
+}
+
+.ProIntro2.active{
+    left: 0;
+}
+/*                                                          About Page Style                                                         */
+
+/* Making the container for the Skills page */
+.SkillsParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
+}
+
+/* For making the container for the content */
+.SkillsChild{
+    height: auto;
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* For giving space after the box in the Skills us */
+.SkillsChild:nth-child(1),
+.SkillsChild:nth-child(2){
+    margin-bottom: 50px;
+}
+
+/* For Giving Styling to the heading of the Skills Us content */
+.SkillsChild h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: wheat;
+    font-size: 30px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* For Giving Styling to the heading of the Skills content */
+.SkillsParent p{
+    margin-top: 5px;
+    color: white;
+    line-height: 25px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
+}
+
+/*                                                          Resume Page                                                         */
+/* Making the container for the Skills page */
+.ResumeParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
 }
