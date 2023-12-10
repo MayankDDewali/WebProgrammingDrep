@@ -1,4 +1,5 @@
 /*                                                          Global Design                                                           */
+
 /* Resetting some default styles */
 * {
     margin: 0;
@@ -164,6 +165,35 @@ body {
 .nav1 {
     margin-left: 50px;
     font-family: MilkMango;
+    font-size: 35px;
+    animation: PortAnimate 10s linear infinite;
+}
+
+/* For animating the color of Portfolio of the header */
+@keyframes PortAnimate {
+    0% {
+        color: lightblue;
+    }
+
+    20% {
+        color: wheat;
+    }
+
+    40% {
+        color: lightblue;
+    }
+
+    60% {
+        color: beige;
+    }
+
+    80% {
+        color: lightblue;
+    }
+
+    100% {
+        color: white;
+    }
 }
 
 /* Second part of NavBar */
@@ -175,6 +205,7 @@ body {
     justify-content: right;
     margin-right: 50px;
     font-family: RhumaSinera;
+    font-size: 25px;
 }
 
 /* For arranging the items in a line */
@@ -201,18 +232,22 @@ body {
 }
 
 /*                                                          Home Page Style                                                         */
+
 /* Making the container for the home page */
-.HomeChild {
+.HomeParent {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 150px;
     word-spacing: 5px;
-    box-shadow: 0 0 5px black, 0 0 25px whitesmoke, 0 0 50px black;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black, 0 0 100px black;
+
     padding: 50px;
 }
+
 /* For styling the Name in the home page */
-.HomeChild h3:nth-child(1){
+.HomeParent h3:nth-child(1) {
     color: wheat;
     font-size: 50px;
     font-weight: 900;
@@ -222,7 +257,7 @@ body {
 }
 
 /* For styling the Profession */
-.HomeChild h3:nth-child(2){
+.HomeParent h3:nth-child(2) {
     color: red;
     font-size: 20px;
     /* font-weight: 900; */
@@ -231,8 +266,94 @@ body {
 }
 
 /* For styling the Intro */
-.HomeChild p{
+.HomeParent p {
     color: white;
     line-height: 25px;
     text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/*                                                          About Page Style                                                         */
+
+/* Making the container for the About page */
+.AboutParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
+}
+
+/* For making the container for the content */
+.AboutChild{
+    height: 120px;
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* For giving space after the box in the about us */
+.AboutChild:nth-child(1),
+.AboutChild:nth-child(2){
+    margin-bottom: 50px;
+}
+
+/* For Giving Styling to the heading of the About Us content */
+.AboutChild h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: wheat;
+    font-size: 30px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* For Giving Styling to the heading of the About Us content */
+.AboutParent p{
+    margin-top: 5px;
+    color: white;
+    line-height: 25px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*                                                          About Page Style                                                         */
+
+/* Making the container for the About page */
+.ProjectsParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
+}
+
+/* For making the box in the Project page */
+.ProjectsChild{
+    height: 450px;
+    width: 400px;
+    background-color: black;
+    border-radius: 35px;
+}
+
+/* For giving some spaces between the boxes */
+.ProjectsChild:nth-child(1),
+.ProjectsChild:nth-child(2){
+    margin-right: 50px;
+}
+
+.ProMain{
+    width: 400px;
+    background-color: greenyellow;
+}
+
+.ProIntro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* width: 400px; */
 }
