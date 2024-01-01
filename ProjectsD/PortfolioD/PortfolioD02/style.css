@@ -2,21 +2,66 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 /* Header Styles */
-header{
-    display: flex;
-}
 /* Navbar Styles */
 .navbar{
     display: flex;
+    border-left: 4px white solid;
+    border-right: 4px white solid;
+}
+.navbar img{
+    margin: 15px;
 }
 .navbar ul{
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 800px;
+}
+.navbar ul li{
+    margin: 20px;
 }
 .navbar a{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+.navbar :hover{
+    color: beige;
+    animation: hovii 2s;
+}
+.HalfBorder1{
+    position: absolute;
+    left: 0;
+    border-bottom: 4px white solid;
+    width: calc(30%);
+}
+.HalfBorder2{
+    position: absolute;
+    left: 70%;
+    border-bottom: 4px white solid;
+    width: calc(100% - 70%);
+}
+/* Hovering effect for navbar */
+@keyframes hovii {
+    0% {
+        text-decoration: underline beige;
+    }
+    25% {
+        text-decoration: underline white;
+    }
+    50% {
+        text-decoration: underline gray;
+    }
+    75% {
+        text-decoration: underline white;
+    }
+    100% {
+        text-decoration: underline beige;
+    }
 }
