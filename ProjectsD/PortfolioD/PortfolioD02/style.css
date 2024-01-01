@@ -1,7 +1,22 @@
-/* Style page */
-
 /*                                                               Universal style                                                       */
 *{
     margin: 0;
     padding: 0;
+}
+
+/* Header Styles */
+header{
+    display: flex;
+}
+/* Navbar Styles */
+.navbar{
+    display: flex;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
 }
