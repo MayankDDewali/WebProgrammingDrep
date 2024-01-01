@@ -1,3 +1,7 @@
 /* Style page */
 
-/* Universal style */
+/*                                                               Universal style                                                       */
+*{
+    margin: 0;
+    padding: 0;
+}
