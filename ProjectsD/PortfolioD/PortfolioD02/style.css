@@ -18,9 +18,11 @@ header {
     border-left: 4px black solid;
     border-right: 4px black solid;
 }
+/* This class is for image */
 .navbar img{
     margin: 15px;
 }
+/* This class is for Making the Navbar-inks to the right */
 .navbar ul{
     display: flex;
     list-style: none;
@@ -28,40 +30,41 @@ header {
     align-items: center;
     margin-left: 710px;
 }
+/* For adjusting the properties of the font of the Navbar-links */
 .navbar ul li{
     margin: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
+/* Giving styles to the Navbar-links to make Neumorphism buttons*/
 .navbar ul li button{
     width: 110px;
     padding: 10px;
     background: #ebeef1;
     border: none;
     box-shadow: inset 5px 5px 5px -1px rgba(10, 99, 169, 0.16),inset -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
-    /* box-shadow: 5px 5px 5px -1px rgba(10, 99, 169, 0.16), -5px -5px 5px -1px rgba(255, 255, 255, 0.70); */
     font-weight: 700;
     font-size: 15px;
 }
+/* For hovering effect to the Neumorphism button */
 .navbar ul li button:hover {
     color: green;
     /* background-color: red; */
     box-shadow: 5px 5px 5px -1px rgba(10, 99, 169, 0.16), -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
-    /* box-shadow: inset 5px 5px 5px -1px rgba(10, 99, 169, 0.16),inset -5px -5px 5px -1px rgba(255, 255, 255, 0.70); */
 }
 .HalfBorder1{
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     border-bottom: 4px black solid;
     width: calc(30%);
 }
 .HalfBorder2{
-    position: absolute;
+    /* position: absolute; */
     left: 70%;
     border-bottom: 4px black solid;
     width: calc(100% - 70%);
 }
 
-/* Body Styles */
+/*                                                          Home Page                                                               */
 .MainBox{
     background-color: #f2f2f2;
     padding: 20px;
@@ -70,7 +73,38 @@ header {
     margin-right: 4px;
     /* border: 8px groove black; */
     border-top: none;
-    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+    box-shadow: inset 10px 10px 10px -7px rgba(10, 99, 169, 0.16),inset -10px -10px 10px -7px rgba(255, 255, 255, 0.70);
+    display: flex;
+    flex-direction: row;
+    background-color: #dde1e7;
 }
 
-/*                                                          Home Page                                                               */
+/* First section of the home page */
+.HomeChild1{
+    width: 550px;
+    box-shadow:  -10px -10px 15px -1px #b8b4b473, 10px 10px 15px rgba(94, 104, 121, .288);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.HomeChild1 h2{
+    margin-top: 15px;
+    color: #dde1e7;
+    font-size: 50px;
+    text-shadow: -5px -5px 9px gray, 5px 5px 9px black;
+}
+.CircularImage{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+.HomeChild2{
+    flex: 1;
+    box-shadow:  -10px -10px 15px -1px #b8b4b473, 10px 10px 15px rgba(94, 104, 121, .288);
+    border-radius: 15px;
+    padding: 50px;
+}
