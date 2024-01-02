@@ -52,13 +52,13 @@ header {
     box-shadow: 5px 5px 5px -1px rgba(10, 99, 169, 0.16), -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
 }
 .HalfBorder1{
-    /* position: absolute; */
+    position: absolute;
     left: 0;
     border-bottom: 4px black solid;
     width: calc(30%);
 }
 .HalfBorder2{
-    /* position: absolute; */
+    position: absolute;
     left: 70%;
     border-bottom: 4px black solid;
     width: calc(100% - 70%);
@@ -80,9 +80,9 @@ header {
 }
 
 /* First section of the home page */
-.HomeChild1{
+.HomeParent1{
     width: 550px;
-    box-shadow:  -10px -10px 15px -1px #b8b4b473, 10px 10px 15px rgba(94, 104, 121, .288);
+    box-shadow:  inset -10px -10px 15px -1px #b8b4b473,inset 10px 10px 15px rgba(94, 104, 121, .288);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,11 +90,15 @@ header {
     border-radius: 15px;
     margin-right: 15px;
 }
-.HomeChild1 h2{
+.HomeParent1 h2{
     margin-top: 15px;
-    color: #dde1e7;
+    /* color: #dde1e7; */
     font-size: 50px;
-    text-shadow: -5px -5px 9px gray, 5px 5px 9px black;
+    /* text-shadow: -5px -5px 9px gray, 5px 5px 9px black; */
+    color: rgb(61, 61, 86);
+    font-weight: 900;
+    box-shadow: inset 5px 5px 5px -1px rgba(10, 99, 169, 0.16),inset -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
+    padding: 10px;
 }
 .CircularImage{
     height: 300px;
@@ -103,9 +107,80 @@ header {
     object-fit: cover;
   }
 /* Second section of the Home Page */
-.HomeChild2{
+.HomeParent2{
     flex: 1;
     box-shadow:  -10px -10px 15px -1px #b8b4b473, 10px 10px 15px rgba(94, 104, 121, .288);
     border-radius: 15px;
     padding: 50px;
 }
+/* This will contain the Intro heading */
+.HomeChild1{
+    display: flex;
+    margin-bottom: 50px;
+}
+.HomeChild1 h2{
+    font-size: 50px;
+    word-spacing: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: gray;
+    text-shadow: -5px -5px 9px beige, 5px 5px 9px lightblue;
+    margin-right: 15px;
+}
+
+/* For the animation to reveal the text */
+.box1{
+    animation: anii1 4s forwards ease-in-out;
+    border-left: 2px solid #dde1e7;
+    background-color: #dde1e7;
+    height: 60px;
+}
+@keyframes anii1 {
+    from{
+        margin-left: -465px;
+        width: 535px;
+    }
+    to{
+        margin-left: 0px;
+        width: 0;
+    }
+}
+.HomeChild2{
+    box-shadow: inset 5px 5px 5px -1px rgba(10, 99, 169, 0.16),inset -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
+    padding: 20px;
+    width: 750px;
+    overflow: hidden;
+    animation: anii2 4s forwards ease-in-out;
+}
+.HomeChild2 p{
+    font-size: 18px;
+    text-shadow: 0 0 3px white;
+    color: gray;
+    height: 80px;
+}
+@keyframes anii2 {
+    from {
+        height: 0;
+    }
+    to {
+        height: 80px;
+    }
+}
+/* .box2{
+    animation: anii2 5s forwards ease-in-out;
+    border-left: 2px solid #dde1e7;
+    background-color: black;
+    width: 750px;
+    margin-left: -10px;
+    margin-top: -50px;
+}
+@keyframes anii2 {
+    from {
+        margin-top: -90px;
+        height: 90px;
+    }
+    to {
+        margin-top: 0;
+        height: 0;
+    }
+} */
