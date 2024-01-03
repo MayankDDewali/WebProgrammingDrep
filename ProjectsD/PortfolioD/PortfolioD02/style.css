@@ -3,11 +3,14 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #dde1e7;
+}
 /* Header Styles */
 header {
     margin: 4px;
     position: relative;
-    background-color: white;
+    background-color: #dde1e7;
     box-shadow: 10px 10px 10px -1px gray, -10px -10px 10px -1px gray;
     z-index: 1;
     margin-bottom: 15px;
@@ -17,6 +20,7 @@ header {
     display: flex;
     border-left: 4px black solid;
     border-right: 4px black solid;
+    background-color: #dde1e7;
 }
 /* This class is for image */
 .navbar img{
@@ -148,22 +152,29 @@ header {
 .HomeChild2{
     box-shadow: inset 5px 5px 5px -1px rgba(10, 99, 169, 0.16),inset -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
     padding: 20px;
-    width: 750px;
     overflow: hidden;
-    animation: anii2 4s forwards ease-in-out;
+    animation: anii2 3s forwards ease-in-out;
+    animation-delay: 4s;
+    height: 0;
+    width: 0;
+    margin-left: 400px;
 }
 .HomeChild2 p{
     font-size: 18px;
     text-shadow: 0 0 3px white;
     color: gray;
-    height: 80px;
 }
+
 @keyframes anii2 {
     from {
         height: 0;
+        width: 0;
     }
+
     to {
         height: 80px;
+        width: 750px;
+        margin-left: 0;
     }
 }
 /* .box2{
