@@ -1,18 +1,94 @@
+<!-- Home page -->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>PortfolioD01</title>
+    <title>PortfolioD02</title>
+    <!-- For adding style using css -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .contact-form {
+            max-width: 500px;
+            padding: 20px;
+            background-color: rgb(24, 40, 40);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+        }
+    
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    
+        .contact-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: white;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        /*This helped in changing the focus for the input and label(helps in changing the style of the input- password and username)*/
+        .parent .child input:focus~label,
+        .parent .child input:valid~label {
+            top: -20px;
+            left: 0;
+            color: blue;
+            font-size: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="parent">
+        <!-- Giving line animation to the parent div -->
         <span class="borderline"></span>
         <span class="borderline1"></span>
+        <span class="borderline2"></span>
+
+        <!-- Div that contain the content -->
         <div class="child">
+            <!-- Header with Navigation -->
             <header>
                 <nav class="navbar">
+                    <!-- Navigation Elements -->
                     <div class="nav1">Portfolio</div>
                     <div class="nav2">
                         <ul>
@@ -26,25 +102,31 @@
                     </div>
                 </nav>
             </header>
-            <div class="p_child1">
-                <div class="child1">
-                    <div>
-                        <h2>About Me</h2>
-                    </div>
-                </div>
-                <div class="child2">
 
+            <div class="ContactParent">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h2 style="color: white; text-align:center;">Contact Us</h2>
+                        <form action="#" method="post">
+                            <label style="color: white;" for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name..." required>
+                
+                            <label style="color: white;" for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email..." required>
+                
+                            <label style="color: white;" for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                
+                            <input type="submit" value="Send Message">
+                        </form>
+                    </div>
                 </div>
             </div>
-            <footer>
-                <div class="foot">
-                    <div class="foot1">
-                        Gaining more skills
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
+
+    <!-- For adding Java Script -->
+    <script src="functions.js"></script>
 </body>
 
 </html>

@@ -1,19 +1,21 @@
+<!-- Project page -->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>PortfolioD01</title>
+    <title>PortfolioD02</title>
+    <!-- For adding style using css -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Parent Container for the entire page -->
     <div class="parent">
-        <!-- Navigation Border Lines -->
+        <!-- Giving line animation to the parent div -->
         <span class="borderline"></span>
         <span class="borderline1"></span>
+        <span class="borderline2"></span>
 
-        <!-- Child Container for the main content -->
+        <!-- Div that contain the content -->
         <div class="child">
             <!-- Header with Navigation -->
             <header>
@@ -32,42 +34,53 @@
                     </div>
                 </nav>
             </header>
-
-            <!-- Project Section -->
-            <div class="about_parent">
-                <!-- Project Content Container -->
-                <div class="project_child1">
-                    <h2>My Projects</h2>
-                    <div class="pp_child">
-                        <div class="ab_project2">
-                            <h3>Quiz Website Project</h3>
+            <div class="ProjectsParent">
+                <div class="Project" onmouseover="slide()" onmouseout="resetSlide()">
+                    <div class="ProjectsChild">
+                        <section class="ProMain">
+                            <h2>Quiz Website Project</h2>
                             <p>-Developed as part of a group project for Manas College of Science, Technology, and Management in collaboration with Techno Hub, the Quiz Website Project showcased my leadership skills. It was recognized as one of the best projects among peers.</p>
                             <p>-Leader in the group project.</p>
                             <p>-Used HTML, CSS, JS.</p>
-                        </div>
-                        <div class="ab_project2">
-                            <h3>AI Assistant:</h3>
+                            <p style="text-align: center;"><a href="https://github.com/MayankDDewali/HTML_CSS_JS-Drep/tree/main/ProjectsD/QuizWebsites-D/QuizWebsiteD0">Click here</a></p>
+                        </section>
+                        <section class="ProIntro">
+                            <p>Know More</p>
+                        </section>
+                    </div>
+                </div>
+                <div class="Project" onmouseover="slide1()" onmouseout="resetSlide1()">
+                    <div class="ProjectsChild1">
+                        <section class="ProMain1">
+                            <h2>AI Assistant:</h2>
                             <p>-Independently developed an AI Assistant capable of answering questions using Python and various libraries. The assistant performs voice-based searches on Wikipedia and opens applications upon command.</p>
                             <p>-Sole developer.</p>
                             <p>-Used Python and relevant libraries.</p>
-                        </div>
+                            <p style="text-align: center;"><a href="https://github.com/MayankDDewali/Python-Drep/blob/main/AI/JarvisD2/main.py">Click here</a></p>
+                        </section>
+                        <section class="ProIntro1">
+                            <p>Know More</p>
+                        </section>
                     </div>
-                    <div class="outro">
-                        <p>I have a variety of programs available on my GitHub profile, covering languages such as C, C++, Python, HTML, CSS, and JavaScript. Feel free to explore and discover more projects. <a href="https://github.com/MayankDDewali">Click here</a></p>
+                </div>
+                <div class="Project" onmouseover="slide2()" onmouseout="resetSlide2()">
+                    <div class="ProjectsChild2">
+                        <section class="ProMain2">
+                            <h2>Git Hub</h2>
+                            <p>I have a variety of programs available on my GitHub profile, covering languages such as C, C++, Python, HTML, CSS, and JavaScript. Feel free to explore and discover more projects.</p>
+                            <p style="text-align: center;"><a href="https://github.com/MayankDDewali">Click here</a></p>
+                        </section>
+                        <section class="ProIntro2">
+                            <p>Know More</p>
+                        </section>
                     </div>
                 </div>
             </div>
-
-            <!-- Footer Section -->
-            <footer>
-                <div class="foot">
-                    <div class="foot1">
-                        Gaining more skills
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
+
+    <!-- For adding Java Script -->
+    <script src="functions.js"></script>
 </body>
 
 </html>

@@ -52,8 +52,12 @@ header {
 /* For hovering effect to the Neumorphism button */
 .navbar ul li button:hover {
     color: green;
-    /* background-color: red; */
+    box-shadow: 5px 5px 5px -1px gray, -5px -5px 5px -1px rgb(112, 109, 109);
+}
+.navbar ul li button:active {
+    color: green;
     box-shadow: 5px 5px 5px -1px rgba(10, 99, 169, 0.16), -5px -5px 5px -1px rgba(255, 255, 255, 0.70);
+
 }
 .HalfBorder1{
     position: absolute;

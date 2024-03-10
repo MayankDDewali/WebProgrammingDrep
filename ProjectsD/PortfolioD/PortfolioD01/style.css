@@ -1,3 +1,5 @@
+/*                                                          Global Design                                                           */
+
 /* Resetting some default styles */
 * {
     margin: 0;
@@ -14,19 +16,39 @@ body {
     background-color: #0e0e11;
 }
 
-/* Container styles */
+/* Adding a font from outside */
+@font-face {
+    /* font-family: MilkMango; */
+    /* src: url(MilkMango.ttf); */
+}
+
+/* Adding a font from outside */
+@font-face {
+    /* font-family: RhumaSinera; */
+    /* src: url(RhumaSineraRegular.ttf); */
+}
+
+/* Making a parent div that will contain the style */
 .parent {
     position: relative;
     border: solid 2px none;
     background-color: gray;
     width: 90%;
-    height: 95vh;
+    height: 90%;
     border-radius: 8px;
     overflow: hidden;
-    animation: 10s animatee infinite;
+    animation: 10s ShadowAnimate infinite;
 }
 
-@keyframes animatee {
+/* This div will contain the content */
+.child {
+    position: absolute;
+    background: #222;
+    inset: 5px;
+}
+
+/* Giving shadow animation */
+@keyframes ShadowAnimate {
     0% {
         box-shadow: 0 0 5px lightblue, 0 0 25px lightblue;
     }
@@ -38,18 +60,14 @@ body {
     50% {
         box-shadow: 0 0 5px darkblue, 0 0 25px darkblue;
     }
-    75%{
+
+    75% {
         box-shadow: 0 0 5px blue, 0 0 25px blue;
     }
+
     100% {
         box-shadow: 0 0 5px lightblue, 0 0 25px lightblue;
     }
-}
-
-.parent .child {
-    position: absolute;
-    background: #222;
-    inset: 5px;
 }
 
 /* Navigation Border Lines */
@@ -76,13 +94,14 @@ body {
     width: 90%;
     height: 100vh;
     transform-origin: bottom right;
-    animation: animate 10s linear infinite;
+    animation: LineAnimate 10s linear infinite;
 }
 
 /* Different colors and animation delays for each line */
 .borderline::before {
     background: linear-gradient(0deg, transparent, transparent, #ff2770, #ff2770, #ff2770);
     animation-delay: -1s;
+    box-shadow: 0 0 10px;
 }
 
 .borderline::after {
@@ -121,7 +140,7 @@ body {
 }
 
 /* Keyframes animation */
-@keyframes animate {
+@keyframes LineAnimate {
     100% {
         transform: rotate(360deg);
     }
@@ -135,323 +154,542 @@ body {
     margin-bottom: 5px;
     height: 7vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: white;
     font-size: 20px;
-    background-color: #1c1c1c;
-    box-shadow: 0 0 5px black, 0 0 25px black;
+    /* background-color: #1c1c1c;
+    box-shadow: 0 0 5px black, 0 0 25px black; */
 }
 
-/* Footer styles */
-.foot {
-    position: relative;
-    float: inline-end;
-    background-color: #1c1c1c;
-    height: 7vh;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* First part of NavBar */
+.nav1 {
+    margin-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    animation: PortAnimate 10s linear infinite;
 }
 
-.navbar .nav2 {
+/* For animating the color of Portfolio of the header */
+@keyframes PortAnimate {
+    0% {
+        color: lightblue;
+    }
+
+    20% {
+        color: wheat;
+    }
+
+    40% {
+        color: lightblue;
+    }
+
+    60% {
+        color: beige;
+    }
+
+    80% {
+        color: lightblue;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+/* Second part of NavBar */
+.nav2 {
     text-decoration: none;
     list-style: none;
     display: flex;
     width: 50%;
-    justify-content: flex-end;
+    justify-content: right;
+    margin-right: 50px;
+    font-size: 25px;
 }
 
-.navbar .nav2 ul {
+/* For arranging the items in a line */
+.nav2 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
+/* Giving spaces to the item */
 .navbar .nav2 li {
     margin-right: 20px;
 }
 
-.navbar .nav2 a {
+/* Giving the styling to the anchor tags of the nav */
+.nav2 a {
     text-decoration: none;
     color: white;
 }
 
-.navbar .nav2 a:hover {
+.nav2 a:hover {
     color: #ff2770;
 }
 
-.p_child {
+/*                                                          Home Page Style                                                         */
+
+/* Making the container for the home page */
+.HomeParent {
     display: flex;
-    height: 76vh;
-    width: 100%;
-    padding: 15px;
+    justify-content: center;
+    flex-direction: column;
+    margin: 150px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black, 0 0 100px black;
+
+    padding: 50px;
 }
 
-.about_parent {
+/* For styling the Name in the home page */
+.HomeParent h3:nth-child(1) {
+    color: beige;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    /* margin-right: 327px; */
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/* For styling the Profession */
+.HomeParent h3:nth-child(2) {
+    color: yellow;
+    font-size: 20px;
+    /* font-weight: 900; */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/* For styling the Intro */
+.HomeParent p {
+    color: white;
+    line-height: 25px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/*                                                          About Page Style                                                         */
+
+/* Making the container for the About page */
+.AboutParent{
     display: flex;
-    height: 76vh;
-    width: 100%;
-    padding: 15px;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
 }
 
-.about_child1 {
-    border: groove 5px beige;
-    height: 100%;
-    width: 100%;
-    animation: 10s animates linear infinite;
-}
-@keyframes animates {
-    0% {
-        box-shadow: 0 0 5px lightblue, 0 0 10px lightblue;
-    }
-
-    25% {
-        box-shadow: 0 0 5px blue, 0 0 10px blue;
-    }
-
-    50% {
-        box-shadow: 0 0 5px darkblue, 0 0 10px darkblue;
-    }
-    75%{
-        box-shadow: 0 0 5px blue, 0 0 10px blue;
-    }
-    100% {
-        box-shadow: 0 0 5px lightblue, 0 0 10px lightblue;
-    }
+/* For making the container for the content */
+.AboutChild{
+    height: 120px;
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.about_child1 h3 {
+/* For giving space after the box in the about us */
+.AboutChild:nth-child(1),
+.AboutChild:nth-child(2){
+    margin-bottom: 50px;
+}
+
+/* For Giving Styling to the heading of the About Us content */
+.AboutChild h3{
+    font-family: 'Times New Roman', Times, serif;
     color: wheat;
     font-size: 30px;
-    margin-top: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-shadow: 0 0 5px black, 0 0 25px black;
-    box-shadow: 0 0 5px blue, 0 0 10px white, 0 0 20px black;
-    word-spacing: 5px;
-    text-align:  center;
-}
-
-.about_child1 p {
-    color: white;
-    font-size: 18px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
     margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    text-shadow: 0 0 25px black;
-    box-shadow: 0 0 2px blue, 0 0 4px white, 0 0 8px black;
+}
+
+/* For Giving Styling to the heading of the About Us content */
+.AboutParent p{
+    margin-top: 5px;
+    color: white;
     line-height: 25px;
-    word-spacing: 5px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.p_child .p_child1 {
-    border: groove 5px beige;
-    height: 100%;
-    width: 100%;
-    animation: 10s animates linear infinite;
-}
+/*                                                          About Page Style                                                         */
 
-.child1 {
-    width: 50%;
-    background-color: rgb(113, 113, 90);
+/* Making the container for the About page */
+.ProjectsParent{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.child2 {
-    width: 50%;
-    background-color: rgb(81, 81, 39);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-}
-
-.child2 .x {
-    display: flex;
-    align-items: center;
-    float: left;
-    border: 2px solid black;
-    height: 125px;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    border-right: none;
-    margin-right: 100px;
-    padding: 20px;
-}
-
-.child2 .y {
-    display: flex;
-    float: right;
-    align-items: center;
-    border: 2px solid black;
-    height: 125px;
-    margin-right: 20px;
-    margin-bottom: 50px;
-    border-left: none;
-    margin-left: 100px;
-    text-align: right;
-    padding: 20px;
-}
-
-.child2 .z {
-    display: flex;
-    float: left;
-    align-items: center;
-    border: 2px solid black;
-    height: 125px;
-    margin-left: 20px;
-    border-right: none;
-    margin-right: 100px;
-    padding: 20px;
-}
-
-.child1 p:nth-child(1) {
-    color: red;
-    margin-bottom: 5px;
-}
-
-.child1 h2 {
-    line-height: 1;
-    color: purple;
-    font-size: 50px;
-}
-
-.child1 p {
-    font-size: larger;
-    color: darkblue;
-}
-
-.child1 button {
-    margin-top: 15px;
-    padding: 10px;
-}
-
-.child1 #but1 {
-    margin-right: 15px;
-    background-color: #222;
-    color: white;
-    font-weight: 500;
-    transition-duration: .5s;
-    border: none;
-}
-
-.child1 #but2 {
-    background-color: #222;
-    color: white;
-    font-weight: 500;
-    transition-duration: .5s;
-    border: none;
-    float: right;
-}
-
-.child1 #but1:hover {
-    background-color: white;
-    color: #222;
-    border: none;
-}
-
-.child1 #but2:hover {
-    background-color: white;
-    color: #222;
-    border: none;
-}
-
-.foot .foot1 {
-    color: beige;
-    font-size: 25px;
-    letter-spacing: 1.5px;
-}
-.p_child1 {
-    display: flex;
-    height: 76vh;
-    width: 100%;
-}
-
-/* Project Styles */
-.project_child1 {
-    border: groove 5px beige;
-    height: 100%;
-    width: 100%;
-    animation: 10s animates linear infinite;
-    padding: 25px;
-}
-.project_child1 h2{
-    text-align: center;
-    color: wheat;
-    font-size: 55px;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.pp_child{
-    display: flex;
     flex-direction: row;
-}
-.ab_project2{
-    height: 300px;
-    border: 5px groove beige;
-    margin: 50px;
-    width: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.ab_project2 h3{
-    color: beige;
-    word-spacing: 10px;
-}
-.ab_project2 p{
-    color: white;
-    word-spacing: 5px;
-    line-height: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.outro{
-    color: white;
-    height: 10%;
-    font-size: 20px;
-}
-.outro a{
-    text-decoration: none;
-    animation: animatess 10s linear infinite;
-    transition: 0.8s;
-}
-.outro a:hover{
-    color: white;
-    text-shadow: 0 0 5px white, 0 0 25px lightblue, 0 0 50px blue;
+    margin: 10px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
 }
 
-@keyframes animatess {
+/* For making the box in the Project page */
+.Project{
+    height: 450px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    /* background-color: black; */
+    border: none;
+    box-shadow: 0 0 5px black, 0 0 25px rgb(37, 35, 35), 0 0 50px darkslategray, 0 0 100px black;
+}
+.ProjectsChild{
+    height: 450px;
+    width: 200%;
+    border-radius: 35px;
+    transition: 2s;
+    display: flex;
+    left: -50%;
+    overflow: hidden;
+}
+
+/* For giving some spaces between the boxes */
+.Project:nth-child(1),
+.Project:nth-child(2){
+    margin-right: 50px;
+}
+
+.ProMain{
+    width: 100%;
+    background-color: darkslategray;
+    /* text-align: center; */
+}
+
+/* For styling the heading */
+.ProMain h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+    /* margin-left: 65px; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    /* font-family: MilkMango; */
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    word-spacing: 4px;
+    color: wheat;
+}
+
+/* For styling the paragraph */
+.ProMain p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 5px gray, 0 0 25px darkslategray, 0 0 50px black;
+    font-size: 18px;
+    color: white;
+}
+
+.ProIntro{
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    left: -50%;
+    transition: .8s ease-in-out;
+    z-index: 100;
+    /* font-family: RhumaSinera; */
+    font-size: 50px;
+    animation: IntroAni 10s linear infinite;
+}
+
+/* For animation */
+@keyframes IntroAni {
     0% {
-        color: blue;
+        color: lightblue;
+        text-shadow: 0 0 5px black, 0 0 25px lightblue, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
     }
 
     20% {
-        color: darkblue;
+        color: wheat;
+        text-shadow: 0 0 5px black, 0 0 25px yellow, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
     }
 
     40% {
-        color: blue;
+        color: lightblue;
+        text-shadow: 0 0 5px black, 0 0 25px blue, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
     }
 
     60% {
-        color: darkblue;
+        color: beige;
+        text-shadow: 0 0 5px black, 0 0 25px wheat, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
     }
-    80%{
-        color: blue;
+
+    80% {
+        color: lightblue;
+        text-shadow: 0 0 5px black, 0 0 25px blue, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
     }
+
     100% {
-        color: darkblue;
+        color: white;
+        text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px rgb(37, 35, 35), 0 0 100px darkslategray;
     }
+}
+
+.ProIntro.active{
+    left: 0;
+}
+
+/* For Second Box */
+.ProjectsChild1{
+    height: 450px;
+    width: 200%;
+    border-radius: 35px;
+    transition: 2s;
+    display: flex;
+    left: -50%;
+    overflow: hidden;
+}
+
+.ProMain1{
+    width: 100%;
+    background-color: darkslategray;
+}
+
+/* For styling the heading */
+.ProMain1 h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+    /* margin-left: 65px; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    /* font-family: MilkMango; */
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    word-spacing: 4px;
+    color: wheat;
+}
+
+/* For styling the paragraph */
+.ProMain1 p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-shadow: 0 0 5px gray, 0 0 25px darkslategray, 0 0 50px black;
+    font-size: 18px;
+    color: white;
+}
+
+.ProIntro1{
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    left: -50%;
+    transition: .8s ease-in-out;
+    z-index: 100;
+    /* font-family: RhumaSinera; */
+    font-size: 50px;
+    animation: IntroAni 10s linear infinite;
+}
+.ProIntro1.active{
+    left: 0;
+}
+
+/* For Third Box */
+.ProjectsChild2{
+    height: 450px;
+    width: 200%;
+    border-radius: 35px;
+    transition: 2s;
+    display: flex;
+    left: -50%;
+    overflow: hidden;
+}
+
+.ProMain2{
+    width: 100%;
+    background-color: darkslategray;
+}
+
+/* For styling the heading */
+.ProMain2 h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+    /* margin-left: 65px; */
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    /* font-family: MilkMango; */
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    word-spacing: 4px;
+    color: wheat;
+}
+
+/* For styling the paragraph */
+.ProMain2 p{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    line-height: 20px;
+    /* font-weight: 700; */
+    text-shadow: 0 0 5px gray, 0 0 25px darkslategray, 0 0 50px black;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* For Anchor tag */
+.ProMain a{
+    text-decoration: none;
+    /* font-family: RhumaSinera; */
+    font-size: 35px;
+}
+.ProMain1 a{
+    text-decoration: none;
+    /* font-family: RhumaSinera; */
+    font-size: 35px;
+}
+.ProMain2 a{
+    text-decoration: none;
+    /* font-family: RhumaSinera; */
+    font-size: 35px;
+}
+
+.ProIntro2{
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    left: -50%;
+    transition: .8s ease-in-out;
+    z-index: 100;
+    /* font-family: RhumaSinera; */
+    font-size: 50px;
+    animation: IntroAni 10s linear infinite;
+}
+
+.ProIntro2.active{
+    left: 0;
+}
+/*                                                          About Page Style                                                         */
+
+/* Making the container for the Skills page */
+.SkillsParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
+}
+
+/* For making the container for the content */
+.SkillsChild{
+    height: auto;
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* For giving space after the box in the Skills us */
+.SkillsChild:nth-child(1),
+.SkillsChild:nth-child(2){
+    margin-bottom: 50px;
+}
+
+/* For Giving Styling to the heading of the Skills Us content */
+.SkillsChild h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: wheat;
+    font-size: 30px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* For Giving Styling to the heading of the Skills content */
+.SkillsParent p{
+    margin-top: 5px;
+    color: white;
+    line-height: 25px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+    text-align: center;
+}
+
+/*                                                          Resume Page                                                         */
+/* Making the container for the Skills page */
+.ResumeParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
+}
+
+/*                                                          Home Page Style                                                         */
+
+/* Making the container for the home page */
+.ContactParent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 150px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    box-shadow: 0 0 5px gray, 0 0 25px black, 0 0 50px black, 0 0 100px black;
+    padding: 50px;
+}
+
+/* For styling the Name in the Contact page */
+.ContactParent h3:nth-child(1) {
+    color: wheat;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    /* margin-right: 327px; */
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/* For styling the Profession */
+.ContactParent h3:nth-child(2) {
+    color: red;
+    font-size: 20px;
+    /* font-weight: 900; */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/* For styling the Intro */
+.ContactParent p {
+    color: white;
+    line-height: 25px;
+    text-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black;
+}
+
+/*                                                           Contact Page                                                           */
+.ContactParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    padding: 50px;
 }
