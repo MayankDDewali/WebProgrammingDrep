@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.parent {
+    height: 80vh;
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px white, 0 0 25px white;
+    border-radius: 15px;
+}
+
+.sparent {
+    height: 79vh;
+    width: 79.5vw;
+    background-color: rgb(7, 3, 44);
+    box-shadow: 0 0 5px lightblue, 0 0 25px blue;
+    border-radius: 5px;
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav1 {
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 45%;
+    padding-left: 50px;
+}
+
+.nav2 {
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav2 ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav2 ul li {
+    list-style: none;
+}
+
+.nav2 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: wheat;
+}
+
+/* Making the container for the home page */
+.HomeParent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 100px;
+    word-spacing: 5px;
+    /* box-shadow: 0 0 5px black, 0 0 25px gray, 0 0 50px black; */
+    box-shadow: 0 0 5px blue, 0 0 25px black;
+    padding: 50px;
+}
+
+/* For styling the Name in the home page */
+.HomeParent h3:nth-child(1) {
+    color: beige;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    /* margin-right: 327px; */
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+}
+
+/* For styling the Profession */
+.HomeParent h3:nth-child(2) {
+    color: yellow;
+    font-size: 30px;
+    /* font-weight: 900; */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+}
+
+/* For styling the Intro */
+.HomeParent p {
+    color: white;
+    line-height: 25px;
+    text-shadow: 0 0 5px gray, 0 0 25px black;
+    text-align: justify;
+    font-size: 20px;
+}
