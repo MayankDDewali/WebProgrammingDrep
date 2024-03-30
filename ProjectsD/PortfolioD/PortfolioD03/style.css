@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    overflow: hidden;
+}
+
+/*                                                              NavBar                                                              */
+nav{
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+nav ul{
+    display: flex;
+}
+
+/*                                              Left Parent that contains ABOUT-PAGE                                              */
+.LeftParent{
+    height: 300vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: beige;
+}
+
+/* About Me */
+.LeftParent .AboutPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+}
+
+/*                                     Middle Parent that contains Resume, Home, Contact Pages                                     */
+.MiddleParent{
+    height: 300vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Resume */
+.MiddleParent .ResumePage{
+    height: 100vh;
+    width: 100vw;
+    background-color: yellow;
+    transition: 5s;
+}
+
+/* Home */
+.MiddleParent .HomePage{
+    height: 100vh;
+    width: 100vw;
+    background-color: orange;
+    transition: 5s;
+}
+
+/* Contact me */
+.MiddleParent .ContactPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    transition: 5s;
+}
+
+/*                                              Right Parent that contains ABOUT-PAGE                                              */
+.RightParent{
+    height: 300vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: beige;
+}
+
+/* About Me */
+.RightParent .SkillsPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+}

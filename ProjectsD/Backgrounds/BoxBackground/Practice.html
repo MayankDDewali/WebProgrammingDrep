@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            height: 60px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent {
+            height: 200vh; /* Adjust height as needed */
+            background: linear-gradient(to bottom, red 50%, blue 50%);
+            transition: transform 2s; /* Added transition property */
+        }
+        .parent:hover {
+            transform: translateY(100vh);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Navigation Bar</h1>
+    </nav>
+    <div class="parent"></div>
+</body>
+</html>
