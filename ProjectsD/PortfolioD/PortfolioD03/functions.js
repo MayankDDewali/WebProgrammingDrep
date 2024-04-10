@@ -1,3 +1,4 @@
+/*                                                 For Navigating between sections                                                 */
 window.onload = function() {
     // By default, scroll to the Home page on page load
     document.getElementById('HomePage').scrollIntoView();
@@ -19,3 +20,34 @@ window.onload = function() {
         });
     });
 };
+
+const Hov = document.querySelectorAll('nav ul li a');
+
+Hov.forEach(link => {
+    link.addEventListener('mouseover', function(){
+
+        const hovtext = link.textContent;
+
+        const gifname = hovtext + 'Hover.gif';
+
+        console.log(gifname)
+
+        displayGIF(gifname);
+    });
+
+    link.addEventListener('mouseout', function() {
+        hideGIF();
+    });
+})
+
+function displayGIF(gifname){
+
+    const ImgDiv = document.getElementById('HovImg');
+    ImgDiv.src = gifname; 
+}
+
+function hideGIF(){
+
+    const ImgDiv = document.getElementById('HovImg')
+    ImgDiv.src = ''
+}
