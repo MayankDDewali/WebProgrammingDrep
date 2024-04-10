@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*                                      About Us in Home Page                                      */
+.about-us-container{
+    width: 100%;
+    height: 80vh;
+}
+
+.about-us{
+    width: 100%;
+    height: 320px;
+    background-color: rgb(54, 54, 54);
+    margin-top: 140px;
+}
+
+.content-about{
+    padding: 10px 38px;
+}
+
+.heading-about{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(255, 129, 57);
+    margin: 10px 0;
+    margin-bottom: 34px;
+    position: relative;
+}
+
+.heading-about::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
+    height: 2px;
+    width: 46px;
+    background-color: rgb(255, 129, 57);
+}
+
+.para-about{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.695);
+    line-height: 21px;
+    margin: 25px 0;
+}
+
+.link-about{
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 129, 57);
+    color: rgb(255, 129, 57);
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.link-about:hover{
+    color: white;
+}
+
+.span-about{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(255, 129, 57);
+    transition: 0.5s ease-in;
+    z-index: -1;
+}
+
+.link-about:hover .span-about{
+    width: 100%;
+}
