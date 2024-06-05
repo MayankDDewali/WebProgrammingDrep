@@ -348,7 +348,7 @@ body{
 }
 .changecontent::after{
     content: ' ';
-    color: #ffa500;
+    color: #212529;
     text-shadow: 0px 1px 1px black;
     animation: changetext 10s infinite linear;
 }
@@ -379,7 +379,7 @@ body{
     transition: 0.5s;
 }
 .about .content a:hover{
-    background: #ffa500;
+    background: #212529;
     color: white;
 }
 @media (max-width:850px){
@@ -411,7 +411,7 @@ body{
     font-weight: 900;
 }
 .yo span{
-    color: #ffa500;
+    color: #212529;
 }
 .book .card{
     border-radius: 10px;
@@ -440,7 +440,7 @@ body{
     width: 160px;
     font-size: 16px;
     font-weight: 550;
-    background: #ffa500;
+    background: #212529;
     color: white;
     margin-top: 10px;
     transition: 0.5s;
@@ -472,7 +472,7 @@ body{
 .services .card i{
     font-size: 80px;
     text-align: center;
-    color: #ffa500;
+    color: #212529;
     margin-top: 20px;
 }
 .services .card .card-body h3{
