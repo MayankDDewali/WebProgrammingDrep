@@ -1,109 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Aviraj InfoTech</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .banner-image {
-        background-image: url('image/banner-img.jpg');
-        background-size: cover;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="DummyStyle.css" />
+    <title>FoodieXpress</title>
   </head>
   <body>
-  <!-- Navbar  -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Aviraj InfoTech</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- navigatin bar -->
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="mx-auto"></div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="Gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Dropdown menu for navbar -->
-
-      <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent;">
-          Courses
-        </a>
-        
-        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item"  href="robotics.html" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">Robotics</a>
-          <a class="dropdown-item" href="cyber.html" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">Ethical Hacking</a>
-          <a class="dropdown-item" href="appdev.html" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">App Development</a>
-          <a class="dropdown-item" href="artificial.html" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">Artificial Intelligence</a>
+    <header class="bg-header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand text-white fw-bold" href="#" data-bs-toggle="tooltip" data-bs-title="FoodieXpress" data-bs-placement="bottom">FoodieXpress</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#how">How it works</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link cta" href="contact">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <!-- Dropdown menu for navbar -->
-
-      <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent;">
-          IT-Services
-        </a>
-        
-        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item"  href="#" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">Robotics Solutions</a>
-          <a class="dropdown-item" href="#" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">Cyber Audit</a>
-          <a class="dropdown-item" href="#" style="color: white;" onmouseover="this.style.backgroundColor='white'; this.style.color='#212529'" onmouseout="this.style.backgroundColor='#212529';this.style.color='white'">App Development</a>
-        </div>
-      </div>
-    </div>
-    </nav>
-
-    <section class="hero-section py-5" style="background-color: #212529;">
-      <div class="container py-3">
-        <div class="row g-5">
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="col-12 col-lg-6">
-              <h1 class="text-white fw-bold" style="margin-top: 50px;">
-                Delicious Delivered: Discover a World of Flavors at Your
-                Doorstep
-              </h1>
-              <p class="text-white pt-4">
-                Discover a wide range of delectable dishes from various
-                cuisines. From appetizers and main courses to desserts and
-                beverages, we have something to satisfy every craving.
-              </p>
-              <button class="btn mt-5">Order Now</button>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="d-flex justify-content-end">
-                <img src="assets/hero.png" class="hero-img" alt="" />
+      <section class="hero-section py-5" >
+        <div class="container py-3">
+          <div class="row g-5">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="col-12 col-lg-6">
+                <h1 class="text-white fw-bold">
+                  Delicious Delivered: Discover a World of Flavors at Your
+                  Doorstep
+                </h1>
+                <p class="text-white pt-4">
+                  Discover a wide range of delectable dishes from various
+                  cuisines. From appetizers and main courses to desserts and
+                  beverages, we have something to satisfy every craving.
+                </p>
+                <button class="btn mt-5">Order Now</button>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="d-flex justify-content-end">
+                  <img src="assets/hero.png" class="hero-img" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-
+      </section>
+    </header>
     <main>
       <section class="featured py-5" id="features">
         <div class="container">
@@ -332,70 +304,46 @@
       </section>
     </main>
 
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Aviraj InfoTech</h4>
-                    <ul>
-                        <li><a href="about.html">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Online shop</h4>
-                    <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow-us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+    <footer>
+      <div class="container py-5" id="contact">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <h3 class="fw-bold pb-3">Visit us</h3>
+            <p>
+              1234 Foodie Lane, Cityville, <br />
+              State, Country
+            </p>
+            <a href="mailto:info@foodiexpress.com" class="text-dark"
+              >info@foodieexpress.com</a
+            >
+          </div>
+          <div class="col-12 col-lg-4">
+            <h3 class="fw-bold pb-3">Our Link</h3>
+            <div class="d-flex flex-column">
+              <a href="#" class="text-dark">Home</a>
+              <a href="#" class="text-dark">How it works</a>
+              <a href="#" class="text-dark">Features</a>
+              <a href="#" class="text-dark">Contact</a>
             </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h3 class="fw-bold pb-3">Our Link</h3>
+            <div class="d-flex">
+              <a href="#" class="text-dark"
+                ><ion-icon name="logo-facebook" class="icon"></ion-icon
+              ></a>
+              <a href="#" class="text-dark px-3"
+                ><ion-icon name="logo-instagram" class="icon"></ion-icon
+              ></a>
+              <a href="#" class="text-dark px-3"
+                ><ion-icon name="logo-github" class="icon"></ion-icon
+              ></a>
+            </div>
+          </div>
         </div>
-   </footer>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/18890537ae.js" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/functions.js"></script>
-  <script src="https://kit.fontawesome.com/18890537ae.js" crossorigin="anonymous"></script>
-  
-  <script type="text/javascript">
-      var nav = document.querySelector('nav');
-
-      window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 500) {
-          nav.classList.add('bg-dark', 'shadow');
-        } else {
-          nav.classList.remove('bg-dark', 'shadow');
-        }
-      });
-    </script>
+      </div>
+      <p class="text-center copyright"> &copy; 2023 all right reserved by foodiexpress</p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
