@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, #light{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#light canvas{
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+}
