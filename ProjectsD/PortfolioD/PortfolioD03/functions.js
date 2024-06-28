@@ -1,7 +1,7 @@
 /*                                                 For Navigating between sections                                                 */
 window.onload = function() {
     // By default, scroll to the Home page on page load
-    document.getElementById('HomePage').scrollIntoView();
+    document.getElementById('HomePage').scrollIntoView({behavior: "smooth"});
 
     // Get all navigation links
     const navLinks = document.querySelectorAll('nav ul li a');
