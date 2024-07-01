@@ -1,4 +1,4 @@
-const numThreads = 10;
+const numThreads = 29;
 const threadElements = [];
 
 for (let i = 0; i < numThreads; i++) {
@@ -12,6 +12,6 @@ document.addEventListener('mousemove', (event) => {
     threadElements.forEach((thread, index) => {
         setTimeout(() => {
             thread.style.transform = `translate(${clientX}px, ${clientY}px)`;
-        }, index * 20); // Delay each segment for trailing effect
+        }, index * 5); // Delay each segment for trailing effect
     });
 });

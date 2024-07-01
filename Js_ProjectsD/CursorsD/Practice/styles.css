@@ -3,6 +3,7 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     overflow: hidden; /* Prevent scrollbars */
+    background: radial-gradient(circle, purple, black);
 }
 
 .thread-container {
@@ -12,12 +13,35 @@ body {
 }
 
 .thread {
-    width: 2px;
-    height: 2px;
-    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgb(16, 16, 69);
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
     transition: transform 0.05s ease; /* Smooth transition */
+    animation: shadows 3s linear infinite;
+}
+
+@keyframes shadows {
+    0%{
+        box-shadow: 0 0 20px white;
+    }
+    20%{
+        box-shadow: 0 0 40px white;
+    }
+    40%{
+        box-shadow: 0 0 80px white;
+    }
+    60%{
+        box-shadow: 0 0 100px white;
+    }
+    80%{
+        box-shadow: 0 0 80px white;
+    }
+    100%{
+        box-shadow: 0 0 40px white;
+    }
 }
